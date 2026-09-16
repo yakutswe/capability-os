@@ -9,7 +9,8 @@
     "start": "tsx src/index.ts",
     "build": "tsc",
     "eval": "tsx evals/run-evals.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm run eval && npm run build"
   },
   "keywords": [],
   "author": "",
