@@ -1,16 +1,16 @@
-import assert from "assert";
+import assert from "node:assert/strict";
 import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 
-import { StaticCapabilityAdapter } from "../../adapters/static-capability-adapter.js";
-import { DiscoveryAgent } from "../../agents/discovery-agent.js";
-import { EvaluationAgent } from "../../agents/evaluation-agent.js";
-import { IntegrationAgent } from "../../agents/integration-agent.js";
-import { PolicyAgent } from "../../agents/policy-agent.js";
-import { AuditLog } from "../../audit/audit-log.js";
-import { WorkflowOrchestrator } from "../workflow-orchestrator.js";
+import { StaticCapabilityAdapter } from "../src/adapters/static-capability-adapter.js";
+import { DiscoveryAgent } from "../src/agents/discovery-agent.js";
+import { EvaluationAgent } from "../src/agents/evaluation-agent.js";
+import { IntegrationAgent } from "../src/agents/integration-agent.js";
+import { PolicyAgent } from "../src/agents/policy-agent.js";
+import { AuditLog } from "../src/audit/audit-log.js";
+import { WorkflowOrchestrator } from "../src/orchestrator/workflow-orchestrator.js";
 
 const context = {
   requestId: "orchestrator-test-001",
